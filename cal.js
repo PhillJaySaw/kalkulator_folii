@@ -1,4 +1,4 @@
-;01 ,)(esrap;)01 ,(esrap;01 ,)(tnIesrapvar szerCalkowita;
+var szerokosc;
 var dlugosc;
 var grubosc;
 var zakladki;
@@ -25,13 +25,38 @@ function calcWorKapZakladki(a,b,c,d) {
 }
 
 document.getElementById('calcButton').addEventListener("click", function() {
-   szerokosc = parseInt(document.getElementById('szerokosc').value, 10);
-   dlugosc = parseInt(document.getElementById('dlugosc').value, 10);
-   grubosc = parseInt(document.getElementById('grubosc').value, 10);
-   /*zakladki = document.getElementById('zakladki').value;*/
+   szerokosc = parseFloat(document.getElementById('szerokosc').value, 10);
+   dlugosc = parseFloat(document.getElementById('dlugosc').value, 10);
+   grubosc = parseFloat(document.getElementById('grubosc').value, 10);
+   zakladki = document.getElementById('zakladki').value;
+   type = document.getElementById('selectType').value;
 
-   console.log(calcPolRekawTasma(szerCalkowita, dlugosc, grubosc));
+   switch (type) {
+      case "calcPolRekawTasma":
+         console.log(calcPolRekawTasma(szerokosc, dlugosc, grubosc));
+      break;
 
+      case "calcRekaw":
+         console.log(calcRekaw(szerokosc, dlugosc, grubosc));
+      break;
+
+      case "calcWorkiPlasko":
+         console.log(calcRekaw(szerokosc, dlugosc, grubosc));
+      break;
+
+      case "calcWorKapZakladki":
+         console.log(calcRekaw(szerokosc, dlugosc, grubosc, zakladki));
+      break;
+   }
+});
+
+document.getElementById('selectType').addEventListener("change", function() {
+   console.log(this.value);
+   if (this.value !== "calcWorKapZakladki") {
+      document.getElementById('zakladki').disabled = true;
+   } else {
+      document.getElementById('zakladki').disabled = false;
+   }
 });
 
 /*********************TEST*********************

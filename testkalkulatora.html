@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
    <head>
       <meta charset="utf-8">
       <title>kalkulator</title>
@@ -8,21 +8,34 @@
    <body>
       <main>
          <form id="calcForm" action="index.html" method="post">
-            <label for="szerokosc">Szerokość</label>
-            <input type="text" name="szerokosc" value="">
+            <select id="selectType">
+               <option value="calcPolRekawTasma">półrękaw, taśma</option>
+               <option value="calcRekaw">Rękaw</option>
+               <option value="calcWorkiPlasko">Worki na płasko (bez zakładki)</option>
+               <option value="calcWorKapZakladki">Worki i kaptury z zakładkami</option>
+            </select>
+            <span>
+               <label for="szerokosc">Szerokość</label>
+               <input type="text" id="szerokosc" value="" required>
+            </span>
+            <span>
+               <label for="dlugosc">Długość</label>
+               <input type="text" id="dlugosc" value="" required>
+            </span>
+            <span>
+               <label for="grubosc">Grubość</label>
+               <input type="text" id="grubosc" value="" required>
+            </span>
 
-            <label for="dlugosc">Dlugość</label>
-            <input type="text" name="dlugosc" value="">
+            <span>
+               <label for="zakladki">Zakładki</label>
+               <input type="text" id="zakladki" value="" disabled>
+            </span>
 
-            <label for="grubosc">Grubość</label>
-            <input type="text" name="grubosc" value="">
-
-            <label for="zakladki">Zakładki</label>
-            <input type="text" name="zakladki" value="">
-
-            <button type="button" id="calcButton" name="button">Oblicz</button>
+            <!--<button type="button" id="calcButton" name="button">Oblicz</button>-->
+            <input type="submit" id="calcButton" value="Oblicz">
          </form>
       </main>
-      <script src="calc.js"></script>
+      <script src="cal.js"></script>
    </body>
 </html>

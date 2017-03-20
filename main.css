@@ -13,3 +13,33 @@ input[type="text"] {
    display: block;
    margin-bottom: 1em;
 }
+
+input:disabled {
+   background: #aaa;
+   border: solid #777 1px;
+}
+
+#calcButton {
+   padding: .5em 1em;
+   background: #EEE;
+   border: solid #333 1px;
+   box-shadow: none;
+   font-size: 100%;
+   display: block;
+}
+
+#calcForm label { font-size: 110%; }
+
+#calcButton:hover { background: #AAA; }
+
+#calcForm span {
+   display: inline-block;
+   margin-right: 1em;
+}
+
+#selectType {
+   display: block;
+   margin-bottom: 2em;
+   border-radius: 0;
+   font-size: 110%;
+}
