@@ -1,0 +1,15 @@
+main {
+   width: 900px;
+   margin: 0 auto;
+   padding: 1em;
+   background-color: #ddd;
+   font-family: "helvetica", sans-serif;
+   color: #555;
+}
+
+input[type="text"] {
+   border: none;
+   padding: 3px 5px;
+   display: block;
+   margin-bottom: 1em;
+}

@@ -3,10 +3,26 @@
    <head>
       <meta charset="utf-8">
       <title>kalkulator</title>
+      <link rel="stylesheet" href="main.css">
    </head>
    <body>
-      <script src="calc.js" type="text/javascript">
+      <main>
+         <form id="calcForm" action="index.html" method="post">
+            <label for="szerokosc">Szerokość</label>
+            <input type="text" name="szerokosc" value="">
 
-      </script>
+            <label for="dlugosc">Dlugość</label>
+            <input type="text" name="dlugosc" value="">
+
+            <label for="grubosc">Grubość</label>
+            <input type="text" name="grubosc" value="">
+
+            <label for="zakladki">Zakładki</label>
+            <input type="text" name="zakladki" value="">
+
+            <button type="button" id="calcButton" name="button">Oblicz</button>
+         </form>
+      </main>
+      <script src="calc.js"></script>
    </body>
 </html>
